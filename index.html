@@ -1,0 +1,2561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Trip Itinerary - April 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e94560;
+            --primary-light: #ffebee;
+            --secondary: #16213e;
+            --secondary-light: #e3f2fd;
+            --text: #333;
+            --text-light: #666;
+            --background: #f8f9fa;
+            --white: #fff;
+            --border: #eaeaea;
+            --success: #4caf50;
+            --warning: #ff9800;
+            --radius: 12px;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .dark {
+            --primary: #ff4d6d;
+            --primary-light: #3a3a3a;
+            --secondary: #0d7377;
+            --secondary-light: #323232;
+            --text: #e0e0e0;
+            --text-light: #aaaaaa;
+            --background: #121212;
+            --white: #1e1e1e;
+            --border: #333333;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo h1 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Main container */
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem;
+            gap: 1.5rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background-color: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            height: calc(100vh - 90px);
+            position: sticky;
+            top: 80px;
+            overflow-y: auto;
+            transition: var(--transition);
+        }
+
+        .sidebar.hidden {
+            transform: translateX(-100%);
+            position: fixed;
+            z-index: 99;
+            height: 100vh;
+            top: 0;
+            left: 0;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .close-sidebar {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .trip-info {
+            background-color: var(--primary-light);
+            padding: 1rem;
+            border-radius: var(--radius);
+            margin-bottom: 1.5rem;
+        }
+
+        .trip-info p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .trip-info i {
+            color: var(--primary);
+            width: 20px;
+            text-align: center;
+        }
+
+        .nav-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-section h3 {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-section h3 i {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem;
+            border-radius: var(--radius);
+            margin-bottom: 0.5rem;
+            color: var(--text);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .nav-link i {
+            margin-right: 0.8rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Content */
+        .content {
+            flex: 1;
+        }
+
+        .hero {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            background-image: url('https://source.unsplash.com/1600x900/?japan,cherry-blossom');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 250px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-family: 'Noto Serif JP', serif;
+            border: none;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        .countdown {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        .day-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .day-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .day-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin: 0;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .day-header h2 i {
+            color: var(--primary);
+        }
+
+        .day-header .date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            background-color: var(--secondary-light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+        }
+
+        .day-weather {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary-light);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            margin-top: 0.5rem;
+        }
+
+        .day-weather i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .day-weather-temp {
+            font-weight: 600;
+        }
+
+        .day-content {
+            padding: 0 1.5rem;
+        }
+
+        .day-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .day-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .day-tab {
+            padding: 1rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-light);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            white-space: nowrap;
+            transition: var(--transition);
+        }
+
+        .day-tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .day-tab i {
+            margin-right: 0.5rem;
+        }
+
+        .tab-content {
+            display: none;
+            padding-bottom: 1.5rem;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .schedule-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .schedule-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 8px;
+            width: 2px;
+            background-color: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.3rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            z-index: 1;
+        }
+
+        .timeline-time {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-title {
+            font-weight: 500;
+        }
+
+        .timeline-content {
+            background-color: var(--secondary-light);
+            padding: 1rem;
+            border-radius: var(--radius);
+            margin-top: 0.5rem;
+        }
+
+        .place-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+            display: flex;
+            gap: 1rem;
+            transition: var(--transition);
+        }
+
+        .place-card:hover {
+            border-color: var(--primary);
+        }
+
+        .place-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-light);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .place-info {
+            flex: 1;
+        }
+
+        .place-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .place-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .place-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .place-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            background-color: var(--secondary-light);
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+        }
+
+        .place-meta i {
+            color: var(--primary);
+        }
+
+        .place-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .place-btn {
+            background-color: var(--secondary-light);
+            color: var(--secondary);
+            border: none;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .place-btn:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .travel-info {
+            background-color: var(--secondary-light);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .travel-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .travel-info h4 i {
+            color: var(--primary);
+        }
+
+        .travel-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .travel-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .travel-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--white);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .travel-details {
+            flex: 1;
+        }
+
+        .travel-details h5 {
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .travel-details p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .travel-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .travel-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            background-color: var(--white);
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+        }
+
+        .restaurant-card {
+            display: flex;
+            gap: 1rem;
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .restaurant-card:hover {
+            border-color: var(--primary);
+        }
+
+        .restaurant-image {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius);
+            background-color: var(--primary-light);
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+        }
+
+        .restaurant-info {
+            flex: 1;
+        }
+
+        .restaurant-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .restaurant-info h4 i {
+            color: var(--primary);
+        }
+
+        .restaurant-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .restaurant-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .restaurant-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            background-color: var(--secondary-light);
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+        }
+
+        .restaurant-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+        }
+
+        .directions-box {
+            background-color: var(--primary-light);
+            border-radius: var(--radius);
+            padding: 0.8rem;
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+        }
+
+        .directions-box h5 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .directions-box h5 i {
+            color: var(--primary);
+        }
+
+        .directions-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .directions-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .map-container {
+            height: 300px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin: 1rem 0;
+            border: 1px solid var(--border);
+        }
+
+        .tips-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .tips-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tips-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .tip-item {
+            display: flex;
+            gap: 0.8rem;
+            align-items: flex-start;
+        }
+
+        .tip-icon {
+            width: 36px;
+            height: 36px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .tip-content {
+            flex: 1;
+        }
+
+        .tip-content h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .tip-content p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .currency-converter {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .currency-converter h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .converter-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background-color: var(--background);
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        .convert-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .convert-btn:hover {
+            background-color: var(--secondary);
+        }
+
+        .conversion-result {
+            background-color: var(--secondary-light);
+            padding: 1rem;
+            border-radius: var(--radius);
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .conversion-result p {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .conversion-result span {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        footer p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Back to top button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 99;
+        }
+
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #back-to-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 1024px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+            }
+
+            .trip-info {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .sidebar.hidden {
+                display: block;
+                width: 280px;
+                transform: translateX(0);
+            }
+
+            .close-sidebar {
+                display: block;
+            }
+
+            .day-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .day-tab {
+                padding: 1rem 1rem;
+            }
+
+            .restaurant-card, .place-card {
+                flex-direction: column;
+            }
+
+            .restaurant-image {
+                width: 100%;
+                height: 120px;
+            }
+
+            .place-icon {
+                width: 100%;
+                height: 40px;
+            }
+
+            .tips-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-torii-gate"></i>
+            <h1>Japan Trip 2025</h1>
+        </div>
+        <div class="header-actions">
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-toggle" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Trip Navigator</h2>
+                <button class="close-sidebar" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="trip-info">
+                <p><i class="fas fa-calendar-alt"></i> April 1-8, 2025</p>
+                <p><i class="fas fa-users"></i> Family of 4</p>
+                <p><i class="fas fa-map-marker-alt"></i> Osaka, Kyoto, Tokyo</p>
+                <p><i class="fas fa-yen-sign"></i> Budget: ~¥120,000</p>
+            </div>
+
+            <div class="nav-section">
+                <h3><i class="fas fa-calendar-day"></i> Itinerary</h3>
+                <div class="nav-links">
+                    <a href="#day1" class="nav-link active">
+                        <i class="fas fa-plane-arrival"></i>
+                        Day 1: Arrival in Osaka
+                    </a>
+                    <a href="#day2" class="nav-link">
+                        <i class="fas fa-ticket-alt"></i>
+                        Day 2: USJ & Shopping
+                    </a>
+                    <a href="#day3" class="nav-link">
+                        <i class="fas fa-leaf"></i>
+                        Day 3: Nara
+                    </a>
+                    <a href="#day4" class="nav-link">
+                        <i class="fas fa-torii-gate"></i>
+                        Day 4: Kyoto
+                    </a>
+                    <a href="#day5" class="nav-link">
+                        <i class="fas fa-city"></i>
+                        Day 5: Tokyo
+                    </a>
+                    <a href="#day6" class="nav-link">
+                        <i class="fas fa-train"></i>
+                        Day 6: Tokyo to Osaka
+                    </a>
+                    <a href="#day7" class="nav-link">
+                        <i class="fas fa-landmark"></i> Day 7: Osaka Exploration
+                    </a>
+                    <a href="#day8" class="nav-link">
+                        <i class="fas fa-plane-departure"></i>
+                        Day 8: Departure
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <h3><i class="fas fa-info-circle"></i> Resources</h3>
+                <div class="nav-links">
+                    <a href="#tips" class="nav-link">
+                        <i class="fas fa-lightbulb"></i>
+                        Travel Tips
+                    </a>
+                    <a href="#currency" class="nav-link">
+                        <i class="fas fa-exchange-alt"></i>
+                        Currency Converter
+                    </a>
+                    <a href="#" class="nav-link" id="packing-link">
+                        <i class="fas fa-suitcase"></i>
+                        Packing List
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Japan Family Adventure</h2>
+                    <p>Explore the wonders of Japan with your family - from ancient temples to modern attractions.</p>
+                    <div class="countdown" id="trip-countdown">
+                        <i class="fas fa-hourglass-half"></i>
+                        <span id="countdown-text">Loading countdown...</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="day-card" id="day1">
+                <div class="day-header">
+                    <h2><i class="fas fa-plane-arrival"></i> Day 1: Arrival in Osaka</h2>
+                    <span class="date">April 1, 2025</span>
+                    <div class="day-weather">
+                        <i class="fas fa-cloud-sun"></i>
+                        <span class="day-weather-temp">18°C</span>
+                        <span>Partly Cloudy</span>
+                    </div>
+                </div>
+                <div class="day-tabs">
+                    <div class="day-tab active" data-tab="schedule-1">
+                        <i class="fas fa-clock"></i> Schedule
+                    </div>
+                    <div class="day-tab" data-tab="travel-1">
+                        <i class="fas fa-train"></i> Travel
+                    </div>
+                    <div class="day-tab" data-tab="places-1">
+                        <i class="fas fa-map-marker-alt"></i> Places
+                    </div>
+                    <div class="day-tab" data-tab="food-1">
+                        <i class="fas fa-utensils"></i> Food
+                    </div>
+                    <div class="day-tab" data-tab="map-1">
+                        <i class="fas fa-map"></i> Map
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="tab-content active" id="schedule-1">
+                        <div class="schedule-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-time">12:40</div>
+                                <div class="timeline-title">Arrive at Kansai Airport (KIX)</div>
+                                <div class="timeline-content">
+                                    <p>Terminal 1, International Arrivals</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=Kansai+International+Airport', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> View on Map
+                                        </button>
+                                        <button class="place-btn" onclick="window.open('https://www.kansai-airport.or.jp/en/', '_blank')">
+                                            <i class="fas fa-globe"></i> Airport Website
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">13:06–14:10</div>
+                                <div class="timeline-title">Train from KIX to JR Namba</div>
+                                <div class="timeline-content">
+                                    <p>JR Rapid Service, ¥3,240 total for family (¥1,080/adult, ¥540/child)</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=JR+Namba+Station', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> JR Namba Station
+                                        </button>
+                                        <button class="place-btn" onclick="window.open('https://www.westjr.co.jp/global/en/', '_blank')">
+                                            <i class="fas fa-train"></i> JR West Info
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">14:10–14:20</div>
+                                <div class="timeline-title">Walk to Mimaru Osaka Namba Station</div>
+                                <div class="timeline-content">
+                                    <p>400m, approximately 10 minutes walk</p>
+                                    <p>Exit OCAT → South on Sennichimae-dori (300m) → Left at Nipponbashi 5-chome (100m)</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.663524,135.497949', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Hotel Location
+                                        </button>
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?dir=JR+Namba+Station/Mimaru+Osaka+Namba+Station', '_blank')">
+                                            <i class="fas fa-directions"></i> Walking Directions
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">14:30–17:00</div>
+                                <div class="timeline-title">Visit Namba Yasaka Shrine</div>
+                                <div class="timeline-content">
+                                    <p>Quiet, colorful lion-head shrine. Less crowded than Dotonbori.</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.662205,135.498848', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Shrine Location
+                                        </button>
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?dir=Mimaru+Osaka+Namba+Station/Namba+Yasaka+Shrine', '_blank')">
+                                            <i class="fas fa-directions"></i> Directions from Hotel
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">18:00–19:00</div>
+                                <div class="timeline-title">Dinner at Ichiran Dotonbori</div>
+                                <div class="timeline-content">
+                                    <p>Famous ramen restaurant with individual booths. No reservations needed.</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.668594,135.502444', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Restaurant Location
+                                        </button>
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?dir=Namba+Yasaka+Shrine/Ichiran+Dotonbori', '_blank')">
+                                            <i class="fas fa-directions"></i> Directions from Shrine
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">19:00–19:15</div>
+                                <div class="timeline-title">Walk back to hotel</div>
+                                <div class="timeline-content">
+                                    <p>600m, 8-10 mins. South on Dotonbori-dori (200m) → Right onto Sennichimae-dori (300m) → Left at Nipponbashi 5-chome (100m).</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?dir=Ichiran+Dotonbori/Mimaru+Osaka+Namba+Station', '_blank')">
+                                            <i class="fas fa-directions"></i> Walking Directions
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="travel-1">
+                        <div class="travel-info">
+                            <h4><i class="fas fa-train"></i> Train Information</h4>
+                            <div class="travel-item">
+                                <div class="travel-icon">
+                                    <i class="fas fa-train"></i>
+                                </div>
+                                <div class="travel-details">
+                                    <h5>KIX to JR Namba - JR Rapid Service</h5>
+                                    <p>64 minutes journey time</p>
+                                    <div class="travel-meta">
+                                        <span><i class="fas fa-yen-sign"></i> ¥1,080/adult</span>
+                                        <span><i class="fas fa-child"></i> ¥540/child</span>
+                                        <span><i class="fas fa-clock"></i> 13:06-14:10</span>
+                                        <span><i class="fas fa-info-circle"></i> No reservation needed</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="travel-item">
+                                <div class="travel-icon">
+                                    <i class="fas fa-walking"></i>
+                                </div>
+                                <div class="travel-details">
+                                    <h5>JR Namba to Hotel - Walking</h5>
+                                    <p>Exit OCAT → South on Sennichimae-dori (300m) → Left at Nipponbashi 5-chome (100m)</p>
+                                    <div class="travel-meta">
+                                        <span><i class="fas fa-ruler-horizontal"></i> 400m</span>
+                                        <span><i class="fas fa-clock"></i> 5-7 mins</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-actions">
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.666135,135.495859', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> JR Namba Station
+                            </button>
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.663524,135.497949', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> Mimaru Osaka Namba Station
+                            </button>
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=Kansai+International+Airport', '_blank')">
+                                <i class="fas fa-plane"></i> Kansai Airport
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="places-1">
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-torii-gate"></i>
+                            </div>
+                            <div class="place-info">
+                                <h4>Namba Yasaka Shrine</h4>
+                                <p>Quiet, colorful lion-head shrine. Less crowded than Dotonbori. The shrine's main building is shaped like a lion's head, which is believed to swallow evil spirits and bring good luck.</p>
+                                <div class="place-meta">
+                                    <span><i class="fas fa-clock"></i> 14:30-17:00</span>
+                                    <span><i class="fas fa-star"></i> 4.3/5</span>
+                                    <span><i class="fas fa-yen-sign"></i> Free admission</span>
+                                    <span><i class="fas fa-clock"></i> Open 24 hours</span>
+                                </div>
+                                <div class="place-actions">
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.662205,135.498848', '_blank')">
+                                        <i class="fas fa-map-marker-alt"></i> View on Map
+                                    </button>
+                                    <button class="place-btn" onclick="window.open('https://www.japan-guide.com/e/e4012.html', '_blank')">
+                                        <i class="fas fa-info-circle"></i> More Info
+                                    </button>
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?dir=Mimaru+Osaka+Namba+Station/Namba+Yasaka+Shrine', '_blank')">
+                                        <i class="fas fa-directions"></i> Directions
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-hotel"></i>
+                            </div>
+                            <div class="place-info">
+                                <h4>Mimaru Osaka Namba Station</h4>
+                                <p>Family-friendly apartment hotel with kitchen facilities, perfect for families. Located close to Namba Station and Dotonbori area.</p>
+                                <div class="place-meta">
+                                    <span><i class="fas fa-star"></i> 4.5/5</span>
+                                    <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                                    <span><i class="fas fa-utensils"></i> Kitchen in room</span>
+                                    <span><i class="fas fa-check-circle"></i> Check-in: 15:00</span>
+                                </div>
+                                <div class="place-actions">
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.663524,135.497949', '_blank')">
+                                        <i class="fas fa-map-marker-alt"></i> View on Map
+                                    </button>
+                                    <button class="place-btn" onclick="window.open('https://mimaruhotels.com/en/', '_blank')">
+                                        <i class="fas fa-globe"></i> Hotel Website
+                                    </button>
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?dir=JR+Namba+Station/Mimaru+Osaka+Namba+Station', '_blank')">
+                                        <i class="fas fa-directions"></i> Directions from Station
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="food-1">
+                        <div class="restaurant-card">
+                            <div class="restaurant-image" style="background-image: url('https://source.unsplash.com/random/300x300/?ramen')"></div>
+                            <div class="restaurant-info">
+                                <h4><i class="fas fa-utensils"></i> Ichiran Dotonbori</h4>
+                                <p>Famous ramen restaurant with individual booths for a unique dining experience. Known for their tonkotsu ramen with customizable spice levels.</p>
+                                <div class="restaurant-meta">
+                                    <span><i class="fas fa-star"></i> 4.4/5</span>
+                                    <span><i class="fas fa-yen-sign"></i> ¥1,000-1,500/person</span>
+                                    <span><i class="fas fa-clock"></i> 18:00-19:00</span>
+                                    <span><i class="fas fa-info-circle"></i> No reservations</span>
+                                    <span><i class="fas fa-clock"></i> Open 24 hours</span>
+                                    <span><i class="fas fa-language"></i> English menu available</span>
+                                </div>
+                                <div class="restaurant-actions">
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.668594,135.502444', '_blank')">
+                                        <i class="fas fa-map-marker-alt"></i> View on Map
+                                    </button>
+                                    <button class="place-btn" onclick="window.open('https://en.ichiran.com/', '_blank')">
+                                        <i class="fas fa-globe"></i> Website
+                                    </button>
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?dir=Namba+Yasaka+Shrine/Ichiran+Dotonbori', '_blank')">
+                                        <i class="fas fa-directions"></i> Directions from Shrine
+                                    </button>
+                                </div>
+                                <div class="directions-box">
+                                    <h5><i class="fas fa-walking"></i> Walking Directions</h5>
+                                    <p><strong>From Shrine to Ichiran:</strong> 900m, 12-15 mins. Northeast on Motomachi-dori (400m) → Right onto Sennichimae-dori (400m) → Left onto Dotonbori canal path (100m).</p>
+                                    <p><strong>From Ichiran to Hotel:</strong> 600m, 8-10 mins. South on Dotonbori-dori (200m) → Right onto Sennichimae-dori (300m) → Left at Nipponbashi 5-chome (100m).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="map-1">
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3281.3776177291394!2d135.49584086524805!3d34.66539998044136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x6000e76cf6a15555%3A0x4c1d5e0a1b1cc89f!2sJR%20Namba%20Station%2C%20Namba%2C%20Chuo%20Ward%2C%20Osaka%2C%20Japan!3m2!1d34.666135!2d135.49585899999998!4m5!1s0x6000e76d2d630899%3A0x3fe8b1f0275a1f2!2sMimaru%20Osaka%20Namba%20Station%2C%20Japan%2C%20%E3%80%92556-0011%20Osaka%2C%20Naniwa%20Ward%2C%20Nipponbashi%2C%205%20Chome%E2%88%9211%E2%88%9215!3m2!1d34.663524!2d135.497949!5e0!3m2!1sen!2sus!4v1648226800000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="place-actions">
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.666135,135.495859', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> JR Namba Station
+                            </button>
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.663524,135.497949', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> Mimaru Osaka Namba Station
+                            </button>
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.662205,135.498848', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> Namba Yasaka Shrine
+                            </button>
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.668594,135.502444', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> Ichiran Dotonbori
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="day-card" id="day2">
+                <div class="day-header">
+                    <h2><i class="fas fa-ticket-alt"></i> Day 2: USJ & Shopping</h2>
+                    <span class="date">April 2, 2025</span>
+                    <div class="day-weather">
+                        <i class="fas fa-sun"></i>
+                        <span class="day-weather-temp">20°C</span>
+                        <span>Sunny</span>
+                    </div>
+                </div>
+                <div class="day-tabs">
+                    <div class="day-tab active" data-tab="schedule-2">
+                        <i class="fas fa-clock"></i> Schedule
+                    </div>
+                    <div class="day-tab" data-tab="travel-2">
+                        <i class="fas fa-train"></i> Travel
+                    </div>
+                    <div class="day-tab" data-tab="places-2">
+                        <i class="fas fa-map-marker-alt"></i> Places
+                    </div>
+                    <div class="day-tab" data-tab="food-2">
+                        <i class="fas fa-utensils"></i> Food
+                    </div>
+                    <div class="day-tab" data-tab="map-2">
+                        <i class="fas fa-map"></i> Map
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="tab-content active" id="schedule-2">
+                        <div class="schedule-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-time">06:30-07:00</div>
+                                <div class="timeline-title">Breakfast at Okonomiyaki Chitose</div>
+                                <div class="timeline-content">
+                                    <p>Traditional Osaka-style savory pancakes</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.668056,135.502222', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Restaurant Location
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">07:00-07:25</div>
+                                <div class="timeline-title">Train from JR Namba to Universal City</div>
+                                <div class="timeline-content">
+                                    <p>25 minutes journey, ¥540 total</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.665442,135.432338', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Universal City Station
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">07:25-14:00</div>
+                                <div class="timeline-title">Visit Universal Studios Japan</div>
+                                <div class="timeline-content">
+                                    <p>Enjoy Super Nintendo World, The Wizarding World of Harry Potter, and other attractions</p>
+                                    <p>Lunch at 12:00 inside the park</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.667827,135.432653', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> USJ Location
+                                        </button>
+                                        <button class="place-btn" onclick="window.open('https://www.usj.co.jp/web/en/us', '_blank')">
+                                            <i class="fas fa-globe"></i> USJ Website
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">14:05-14:35</div>
+                                <div class="timeline-title">Train to Shinsaibashi</div>
+                                <div class="timeline-content">
+                                    <p>30 minutes journey, ¥720 total</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.675278,135.500833', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Shinsaibashi Station
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">14:35-16:30</div>
+                                <div class="timeline-title">Shopping at Shinsaibashi</div>
+                                <div class="timeline-content">
+                                    <p>Fashion and souvenir shopping at Shinsaibashi-suji Shopping Street</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.670833,135.501944', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Shinsaibashi Shopping Area
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">16:30-18:00</div>
+                                <div class="timeline-title">Shopping at Dotonbori</div>
+                                <div class="timeline-content">
+                                    <p>Quirky shops and street food along the famous canal</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.665442,135.501944', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Dotonbori Area
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">18:30-19:30</div>
+                                <div class="timeline-title">Dinner at Mizuno</div>
+                                <div class="timeline-content">
+                                    <p>Michelin-rated okonomiyaki restaurant</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.668611,135.502778', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Restaurant Location
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">19:30-19:45</div>
+                                <div class="timeline-title">Walk back to hotel</div>
+                                <div class="timeline-content">
+                                    <p>600m, 8-10 mins walk</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?dir=Mizuno+Osaka/Mimaru+Osaka+Namba+Station', '_blank')">
+                                            <i class="fas fa-directions"></i> Walking Directions
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="travel-2">
+                        <div class="travel-info">
+                            <h4><i class="fas fa-train"></i> Train Information</h4>
+                            <div class="travel-item">
+                                <div class="travel-icon">
+                                    <i class="fas fa-train"></i>
+                                </div>
+                                <div class="travel-details">
+                                    <h5>JR Namba to Universal City</h5>
+                                    <p>JR Yumesaki Line, 25 minutes journey</p>
+                                    <div class="travel-meta">
+                                        <span><i class="fas fa-yen-sign"></i> ¥180/adult</span>
+                                        <span><i class="fas fa-child"></i> ¥90/child</span>
+                                        <span><i class="fas fa-clock"></i> 07:00-07:25</span>
+                                        <span><i class="fas fa-info-circle"></i> No reservation needed</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="travel-item">
+                                <div class="travel-icon">
+                                    <i class="fas fa-train"></i>
+                                </div>
+                                <div class="travel-details">
+                                    <h5>Universal City to Shinsaibashi</h5>
+                                    <p>JR Yumesaki Line to Nishikujo, transfer to Osaka Loop Line, then to Midosuji Subway Line</p>
+                                    <div class="travel-meta">
+                                        <span><i class="fas fa-yen-sign"></i> ¥240/adult</span>
+                                        <span><i class="fas fa-child"></i> ¥120/child</span>
+                                        <span><i class="fas fa-clock"></i> 14:05-14:35</span>
+                                        <span><i class="fas fa-exchange-alt"></i> 2 transfers</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-actions">
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.666135,135.495859', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> JR Namba Station
+                            </button>
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.665442,135.432338', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> Universal City Station
+                            </button>
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.675278,135.500833', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> Shinsaibashi Station
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="places-2">
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
+                            <div class="place-info">
+                                <h4>Universal Studios Japan</h4>
+                                <p>One of Japan's most popular theme parks featuring attractions based on movies and characters including Harry Potter, Nintendo, Minions, and more.</p>
+                                <div class="place-meta">
+                                    <span><i class="fas fa-clock"></i> 07:25-14:00</span>
+                                    <span><i class="fas fa-star"></i> 4.6/5</span>
+                                    <span><i class="fas fa-yen-sign"></i> ¥8,400/adult, ¥5,400/child</span>
+                                    <span><i class="fas fa-clock"></i> Opens 8:30, arrive early!</span>
+                                </div>
+                                <div class="place-actions">
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.667827,135.432653', '_blank')">
+                                        <i class="fas fa-map-marker-alt"></i> View on Map
+                                    </button>
+                                    <button class="place-btn" onclick="window.open('https://www.usj.co.jp/web/en/us', '_blank')">
+                                        <i class="fas fa-globe"></i> Official Website
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <div class="place-info">
+                                <h4>Shinsaibashi Shopping Street</h4>
+                                <p>Osaka's premier shopping district with a covered arcade stretching about 600 meters. Features department stores, boutiques, and international brands.</p>
+                                <div class="place-meta">
+                                    <span><i class="fas fa-clock"></i> 14:35-16:30</span>
+                                    <span><i class="fas fa-star"></i> 4.4/5</span>
+                                    <span><i class="fas fa-clock"></i> Most shops open 11:00-21:00</span>
+                                </div>
+                                <div class="place-actions">
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.670833,135.501944', '_blank')">
+                                        <i class="fas fa-map-marker-alt"></i> View on Map
+                                    </button>
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?dir=Shinsaibashi+Station/Shinsaibashi+Shopping+Street', '_blank')">
+                                        <i class="fas fa-directions"></i> Directions
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="place-info">
+                                <h4>Dotonbori</h4>
+                                <p>Famous entertainment district along the Dotonbori canal with iconic neon signs, street food, and the famous Glico Running Man sign.</p>
+                                <div class="place-meta">
+                                    <span><i class="fas fa-clock"></i> 16:30-18:00</span>
+                                    <span><i class="fas fa-star"></i> 4.7/5</span>
+                                    <span><i class="fas fa-camera"></i> Great photo spot</span>
+                                </div>
+                                <div class="place-actions">
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.665442,135.501944', '_blank')">
+                                        <i class="fas fa-map-marker-alt"></i> View on Map
+                                    </button>
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?dir=Shinsaibashi+Shopping+Street/Dotonbori', '_blank')">
+                                        <i class="fas fa-directions"></i> Directions
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="food-2">
+                        <div class="restaurant-card">
+                            <div class="restaurant-image" style="background-image: url('https://source.unsplash.com/random/300x300/?okonomiyaki')"></div>
+                            <div class="restaurant-info">
+                                <h4><i class="fas fa-utensils"></i> Okonomiyaki Chitose</h4>
+                                <p>Traditional Osaka-style okonomiyaki (savory pancake) restaurant. Perfect for an early breakfast before heading to USJ.</p>
+                                <div class="restaurant-meta">
+                                    <span><i class="fas fa-star"></i> 4.3/5</span>
+                                    <span><i class="fas fa-yen-sign"></i> ¥800-1,200/person</span>
+                                    <span><i class="fas fa-clock"></i> 06:30-07:00</span>
+                                    <span><i class="fas fa-clock"></i> Opens 6:00</span>
+                                </div>
+                                <div class="restaurant-actions">
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.668056,135.502222', '_blank')">
+                                        <i class="fas fa-map-marker-alt"></i> View on Map
+                                    </button>
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?dir=Mimaru+Osaka+Namba+Station/Okonomiyaki+Chitose', '_blank')">
+                                        <i class="fas fa-directions"></i> Directions from Hotel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restaurant-card">
+                            <div class="restaurant-image" style="background-image: url('https://source.unsplash.com/random/300x300/?okonomiyaki,restaurant')"></div>
+                            <div class="restaurant-info">
+                                <h4><i class="fas fa-utensils"></i> Mizuno</h4>
+                                <p>Michelin-rated okonomiyaki restaurant. One of Osaka's most famous spots for this local specialty with over 70 years of history.</p>
+                                <div class="restaurant-meta">
+                                    <span><i class="fas fa-star"></i> 4.6/5</span>
+                                    <span><i class="fas fa-yen-sign"></i> ¥1,500-2,000/person</span>
+                                    <span><i class="fas fa-clock"></i> 18:30-19:30</span>
+                                    <span><i class="fas fa-phone"></i> +81-6-6212-6360</span>
+                                    <span><i class="fas fa-language"></i> English menu available</span>
+                                </div>
+                                <div class="restaurant-actions">
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.668611,135.502778', '_blank')">
+                                        <i class="fas fa-map-marker-alt"></i> View on Map
+                                    </button>
+                                    <button class="place-btn" onclick="window.open('http://www.mizuno-osaka.com/', '_blank')">
+                                        <i class="fas fa-globe"></i> Website
+                                    </button>
+                                    <button class="place-btn" onclick="window.open('https://maps.google.com/?dir=Dotonbori/Mizuno+Osaka', '_blank')">
+                                        <i class="fas fa-directions"></i> Directions from Dotonbori
+                                    </button>
+                                </div>
+                                <div class="directions-box">
+                                    <h5><i class="fas fa-walking"></i> Walking Directions</h5>
+                                    <p><strong>From Dotonbori to Mizuno:</strong> 400m, 5-7 mins. North on Dotonbori-dori (200m) → Left onto Sennichimae-dori (200m).</p>
+                                    <p><strong>From Mizuno to Hotel:</strong> 600m, 8-10 mins. South on Sennichimae-dori (500m) → Left at Nipponbashi 5-chome (100m).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="map-2">
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d52503.92305344707!2d135.43264323953906!3d34.66782699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e3!4m5!1s0x6000e76d2d630899%3A0x3fe8b1f0275a1f2!2sMimaru%20Osaka%20Namba%20Station%2C%20Japan!3m2!1d34.663524!2d135.497949!4m5!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2sUniversal%20Studios%20Japan%2C%20Japan!3m2!1d34.66782699999999!2d135.43264399999998!4m5!1s0x6000e713818af9fd%3A0xb8bb1326b48ba590!2sShinsaibashi%2C%20Chuo%20Ward%2C%20Osaka%2C%20Japan!3m2!1d34.673738!2d135.5003!4m5!1s0x6000e714862f6f43%3A0xb8bb1326b48ba5b0!2sDotonbori%2C%20Chuo%20Ward%2C%20Osaka%2C%20Japan!3m2!1d34.6683895!2d135.5029594!5e0!3m2!1sen!2sus!4v1648226800000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="place-actions">
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.663524,135.497949', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> Hotel
+                            </button>
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.667827,135.432653', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> USJ
+                            </button>
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.670833,135.501944', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> Shinsaibashi
+                            </button>
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.665442,135.501944', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> Dotonbori
+                            </button>
+                            <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.668611,135.502778', '_blank')">
+                                <i class="fas fa-map-marker-alt"></i> Mizuno
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="day-card" id="day3">
+                <div class="day-header">
+                    <h2><i class="fas fa-leaf"></i> Day 3: Nara</h2>
+                    <span class="date">April 3, 2025</span>
+                    <div class="day-weather">
+                        <i class="fas fa-cloud-sun"></i>
+                        <span class="day-weather-temp">19°C</span>
+                        <span>Partly Cloudy</span>
+                    </div>
+                </div>
+                <div class="day-tabs">
+                    <div class="day-tab active" data-tab="schedule-3">
+                        <i class="fas fa-clock"></i> Schedule
+                    </div>
+                    <div class="day-tab" data-tab="travel-3">
+                        <i class="fas fa-train"></i> Travel
+                    </div>
+                    <div class="day-tab" data-tab="places-3">
+                        <i class="fas fa-map-marker-alt"></i> Places
+                    </div>
+                    <div class="day-tab" data-tab="food-3">
+                        <i class="fas fa-utensils"></i> Food
+                    </div>
+                    <div class="day-tab" data-tab="map-3">
+                        <i class="fas fa-map"></i> Map
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="tab-content active" id="schedule-3">
+                        <div class="schedule-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-time">07:30-08:00</div>
+                                <div class="timeline-title">Breakfast at hotel</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">08:15-09:30</div>
+                                <div class="timeline-title">Train from JR Namba to Kintetsu Nara</div>
+                                <div class="timeline-content">
+                                    <p>75 minutes journey, ¥2,880 total for family</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.683333,135.816667', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Kintetsu Nara Station
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">09:30-11:30</div>
+                                <div class="timeline-title">Visit Nara Park & Feed Deer</div>
+                                <div class="timeline-content">
+                                    <p>Home to over 1,200 wild deer that roam freely and can be fed special deer crackers</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.685,135.843056', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Nara Park
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">11:30-12:30</div>
+                                <div class="timeline-title">Visit Todai-ji Temple</div>
+                                <div class="timeline-content">
+                                    <p>Home to the Great Buddha (Daibutsu), one of Japan's largest bronze Buddha statues</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.689167,135.839722', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Todai-ji Temple
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">12:30-13:30</div>
+                                <div class="timeline-title">Lunch at Nakatanidou</div>
+                                <div class="timeline-content">
+                                    <p>Famous for mochi pounding demonstrations and yomogi mochi</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.685278,135.8275', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Restaurant Location
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">13:30-15:00</div>
+                                <div class="timeline-title">Visit Kasuga Taisha Shrine</div>
+                                <div class="timeline-content">
+                                    <p>Famous for its bronze lanterns and beautiful setting in the forest</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.681389,135.848889', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Kasuga Taisha
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">15:00-16:00</div>
+                                <div class="timeline-title">Visit Nara National Museum</div>
+                                <div class="timeline-content">
+                                    <p>Collection of Buddhist art and artifacts</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.682778,135.839722', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Museum Location
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">16:30-17:45</div>
+                                <div class="timeline-title">Train from Kintetsu Nara to JR Namba</div>
+                                <div class="timeline-content">
+                                    <p>75 minutes journey, ¥2,880 total for family</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">18:00-19:30</div>
+                                <div class="timeline-title">Dinner at Kiji Umeda</div>
+                                <div class="timeline-content">
+                                    <p>Famous for Osaka-style okonomiyaki</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.702778,135.498333', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Restaurant Location
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other tabs for Day 3 would be filled with similar detailed content -->
+                </div>
+            </section>
+
+            <section class="day-card" id="day4">
+                <div class="day-header">
+                    <h2><i class="fas fa-torii-gate"></i> Day 4: Kyoto</h2>
+                    <span class="date">April 4, 2025</span>
+                    <div class="day-weather">
+                        <i class="fas fa-cloud"></i>
+                        <span class="day-weather-temp">17°C</span>
+                        <span>Cloudy</span>
+                    </div>
+                </div>
+                <div class="day-tabs">
+                    <div class="day-tab active" data-tab="schedule-4">
+                        <i class="fas fa-clock"></i> Schedule
+                    </div>
+                    <div class="day-tab" data-tab="travel-4">
+                        <i class="fas fa-train"></i> Travel
+                    </div>
+                    <div class="day-tab" data-tab="places-4">
+                        <i class="fas fa-map-marker-alt"></i> Places
+                    </div>
+                    <div class="day-tab" data-tab="food-4">
+                        <i class="fas fa-utensils"></i> Food
+                    </div>
+                    <div class="day-tab" data-tab="map-4">
+                        <i class="fas fa-map"></i> Map
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="tab-content active" id="schedule-4">
+                        <div class="schedule-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-time">07:00-07:30</div>
+                                <div class="timeline-title">Breakfast at hotel</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">07:45-08:45</div>
+                                <div class="timeline-title">Train from Osaka to Kyoto Station</div>
+                                <div class="timeline-content">
+                                    <p>JR Special Rapid Service, 60 minutes, ¥1,440 total for family</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.985556,135.758056', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Kyoto Station
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">09:00-10:30</div>
+                                <div class="timeline-title">Visit Fushimi Inari Shrine</div>
+                                <div class="timeline-content">
+                                    <p>Famous for thousands of vermilion torii gates</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.967222,135.772778', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Fushimi Inari
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">11:00-12:30</div>
+                                <div class="timeline-title">Visit Kiyomizu-dera Temple</div>
+                                <div class="timeline-content">
+                                    <p>UNESCO World Heritage site with wooden stage offering panoramic views</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.994722,135.785', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Kiyomizu-dera
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">12:30-13:30</div>
+                                <div class="timeline-title">Lunch at Omen Kodaiji</div>
+                                <div class="timeline-content">
+                                    <p>Traditional udon noodle restaurant</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=35.000278,135.781111', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Restaurant Location
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">14:00-15:30</div>
+                                <div class="timeline-title">Visit Kinkaku-ji (Golden Pavilion)</div>
+                                <div class="timeline-content">
+                                    <p>Famous Zen temple covered in gold leaf</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=35.039444,135.728889', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Kinkaku-ji
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">16:00-17:30</div>
+                                <div class="timeline-title">Visit Arashiyama Bamboo Grove</div>
+                                <div class="timeline-content">
+                                    <p>Iconic bamboo forest path</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=35.017222,135.672778', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Bamboo Grove
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">18:00-19:30</div>
+                                <div class="timeline-title">Dinner at Giro Giro Hitoshina</div>
+                                <div class="timeline-content">
+                                    <p>Modern Kyoto cuisine (kaiseki) in a traditional setting</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=35.008889,135.770833', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Restaurant Location
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">20:00-21:00</div>
+                                <div class="timeline-title">Train from Kyoto to Osaka</div>
+                                <div class="timeline-content">
+                                    <p>JR Special Rapid Service, 60 minutes, ¥1,440 total for family</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other tabs for Day 4 would be filled with similar detailed content -->
+                </div>
+            </section>
+
+            <section class="day-card" id="day5">
+                <div class="day-header">
+                    <h2><i class="fas fa-city"></i> Day 5: Tokyo</h2>
+                    <span class="date">April 5, 2025</span>
+                    <div class="day-weather">
+                        <i class="fas fa-sun"></i>
+                        <span class="day-weather-temp">21°C</span>
+                        <span>Sunny</span>
+                    </div>
+                </div>
+                <div class="day-tabs">
+                    <div class="day-tab active" data-tab="schedule-5">
+                        <i class="fas fa-clock"></i> Schedule
+                    </div>
+                    <div class="day-tab" data-tab="travel-5">
+                        <i class="fas fa-train"></i> Travel
+                    </div>
+                    <div class="day-tab" data-tab="places-5">
+                        <i class="fas fa-map-marker-alt"></i> Places
+                    </div>
+                    <div class="day-tab" data-tab="food-5">
+                        <i class="fas fa-utensils"></i> Food
+                    </div>
+                    <div class="day-tab" data-tab="map-5">
+                        <i class="fas fa-map"></i> Map
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="tab-content active" id="schedule-5">
+                        <div class="schedule-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-time">06:00-06:30</div>
+                                <div class="timeline-title">Breakfast at hotel</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">07:00-09:30</div>
+                                <div class="timeline-title">Shinkansen from Shin-Osaka to Tokyo Station</div>
+                                <div class="timeline-content">
+                                    <p>Nozomi Shinkansen, 2.5 hours, ¥43,560 total for family (round trip tickets)</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=35.681389,139.764444', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Tokyo Station
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">10:00-11:30</div>
+                                <div class="timeline-title">Visit Senso-ji Temple in Asakusa</div>
+                                <div class="timeline-content">
+                                    <p>Tokyo's oldest temple with famous Kaminarimon Gate</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=35.714722,139.796667', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Senso-ji Temple
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">12:00-13:00</div>
+                                <div class="timeline-title">Lunch at Sushi Zanmai Asakusa</div>
+                                <div class="timeline-content">
+                                    <p>Popular sushi restaurant chain with fresh fish and reasonable prices</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=35.712778,139.795833', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Restaurant Location
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">13:30-15:00</div>
+                                <div class="timeline-title">Visit Tokyo Skytree</div>
+                                <div class="timeline-content">
+                                    <p>One of the world's tallest towers with observation decks offering panoramic views</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=35.710139,139.810833', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Tokyo Skytree
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">15:30-17:00</div>
+                                <div class="timeline-title">Visit Shibuya Crossing & Hachiko Statue</div>
+                                <div class="timeline-content">
+                                    <p>World's busiest pedestrian crossing and famous loyal dog statue</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=35.659444,139.700556', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Shibuya Crossing
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">17:30-19:00</div>
+                                <div class="timeline-title">Dinner at Tonkatsu Maisen Aoyama</div>
+                                <div class="timeline-content">
+                                    <p>Famous for premium breaded pork cutlets</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=35.665833,139.7125', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Restaurant Location
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">19:30-22:00</div>
+                                <div class="timeline-title">Shinkansen from Tokyo to Shin-Osaka</div>
+                                <div class="timeline-content">
+                                    <p>Nozomi Shinkansen, 2.5 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other tabs for Day 5 would be filled with similar detailed content -->
+                </div>
+            </section>
+
+            <section class="day-card" id="day6">
+                <div class="day-header">
+                    <h2><i class="fas fa-train"></i> Day 6: Tokyo to Osaka</h2>
+                    <span class="date">April 6, 2025</span>
+                    <div class="day-weather">
+                        <i class="fas fa-cloud-sun"></i>
+                        <span class="day-weather-temp">19°C</span>
+                        <span>Partly Cloudy</span>
+                    </div>
+                </div>
+                <div class="day-tabs">
+                    <div class="day-tab active" data-tab="schedule-6">
+                        <i class="fas fa-clock"></i> Schedule
+                    </div>
+                    <div class="day-tab" data-tab="travel-6">
+                        <i class="fas fa-train"></i> Travel
+                    </div>
+                    <div class="day-tab" data-tab="places-6">
+                        <i class="fas fa-map-marker-alt"></i> Places
+                    </div>
+                    <div class="day-tab" data-tab="food-6">
+                        <i class="fas fa-utensils"></i> Food
+                    </div>
+                    <div class="day-tab" data-tab="map-6">
+                        <i class="fas fa-map"></i> Map
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="tab-content active" id="schedule-6">
+                        <div class="schedule-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-time">08:00-09:00</div>
+                                <div class="timeline-title">Breakfast at hotel</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">09:30-11:00</div>
+                                <div class="timeline-title">Visit Osaka Castle</div>
+                                <div class="timeline-content">
+                                    <p>Historic castle with museum inside and beautiful park surroundings</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.687222,135.525833', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Osaka Castle
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">11:30-13:00</div>
+                                <div class="timeline-title">Lunch at Osaka Castle Park</div>
+                                <div class="timeline-content">
+                                    <p>Picnic lunch with bento boxes from local convenience store</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">13:30-15:30</div>
+                                <div class="timeline-title">Visit Osaka Aquarium Kaiyukan</div>
+                                <div class="timeline-content">
+                                    <p>One of the world's largest aquariums with whale sharks and other marine life</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.654167,135.428889', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Osaka Aquarium
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">16:00-17:30</div>
+                                <div class="timeline-title">Visit Tempozan Ferris Wheel</div>
+                                <div class="timeline-content">
+                                    <p>112.5-meter tall Ferris wheel with views of Osaka Bay</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.655278,135.431111', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Tempozan Ferris Wheel
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">18:00-19:30</div>
+                                <div class="timeline-title">Dinner at Takoyaki Museum</div>
+                                <div class="timeline-content">
+                                    <p>Food theme park dedicated to Osaka's famous octopus balls</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.655,135.429722', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Restaurant Location
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">20:00-20:30</div>
+                                <div class="timeline-title">Return to hotel</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other tabs for Day 6 would be filled with similar detailed content -->
+                </div>
+            </section>
+
+            <section class="day-card" id="day7">
+                <div class="day-header">
+                    <h2><i class="fas fa-landmark"></i> Day 7: Osaka Exploration</h2>
+                    <span class="date">April 7, 2025</span>
+                    <div class="day-weather">
+                        <i class="fas fa-cloud-sun-rain"></i>
+                        <span class="day-weather-temp">16°C</span>
+                        <span>Light Showers</span>
+                    </div>
+                </div>
+                <div class="day-tabs">
+                    <div class="day-tab active" data-tab="schedule-7">
+                        <i class="fas fa-clock"></i> Schedule
+                    </div>
+                    <div class="day-tab" data-tab="travel-7">
+                        <i class="fas fa-train"></i> Travel
+                    </div>
+                    <div class="day-tab" data-tab="places-7">
+                        <i class="fas fa-map-marker-alt"></i> Places
+                    </div>
+                    <div class="day-tab" data-tab="food-7">
+                        <i class="fas fa-utensils"></i> Food
+                    </div>
+                    <div class="day-tab" data-tab="map-7">
+                        <i class="fas fa-map"></i> Map
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="tab-content active" id="schedule-7">
+                        <div class="schedule-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-time">08:00-09:00</div>
+                                <div class="timeline-title">Breakfast at hotel</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">09:30-11:30</div>
+                                <div class="timeline-title">Visit Umeda Sky Building</div>
+                                <div class="timeline-content">
+                                    <p>Iconic building with "Floating Garden Observatory" offering 360° views</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.705278,135.490278', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Umeda Sky Building
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">12:00-13:00</div>
+                                <div class="timeline-title">Lunch at Kuromon Ichiba Market</div>
+                                <div class="timeline-content">
+                                    <p>Famous food market with fresh seafood and street food</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.666111,135.505278', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Kuromon Market
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">13:30-15:30</div>
+                                <div class="timeline-title">Visit Osaka Museum of Housing and Living</div>
+                                <div class="timeline-content">
+                                    <p>Life-sized recreation of Edo-period Osaka streets</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.699722,135.506389', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Museum Location
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">16:00-17:30</div>
+                                <div class="timeline-title">Shopping at Amerikamura</div>
+                                <div class="timeline-content">
+                                    <p>Trendy shopping district with vintage stores and youth fashion</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.673056,135.499444', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Amerikamura
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">18:00-19:30</div>
+                                <div class="timeline-title">Dinner at Dotonbori Konamon Museum</div>
+                                <div class="timeline-content">
+                                    <p>Restaurant specializing in Osaka's famous flour-based dishes</p>
+                                    <div class="place-actions">
+                                        <button class="place-btn" onclick="window.open('https://maps.google.com/?q=34.668889,135.503333', '_blank')">
+                                            <i class="fas fa-map-marker-alt"></i> Restaurant Location
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">19:30-21:00</div>
+                                <div class="timeline-title">Evening at Dotonbori</div>
+                                <div class="timeline-content">
+                                    <p>Enjoy the famous neon lights and vibrant atmosphere</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other tabs for Day 7 would be filled with similar detailed content -->
+                </div>
+            </section>
+
+            <section class="day-card" id="day8">
+                <div class="day-header">
+                    <h2><i class="fas fa-plane-departure"></i> Day 8: Departure</h2>
+                    <span class="date">April 8, 2025</span>
+                    <div class="day-weather">
+                        <i class="fas fa-sun"></i>
+                        <span class="day-weather-temp">18°C</span>
+                        <span>Sunny</span>
+                    </div>
+                </div>
+                <div class="day-tabs">
+                    <div class="day-tab active" data-tab="schedule-8">
+                        <i class="fas fa-clock"></i> Schedule
+                    </div>
+                    <div class="day-tab" data-tab="travel-8">
+                        <i class="fas fa-train"></i> Travel
+                    </div>
+                    <div class="day-tab" data-tab="places-8">
+                        <i class="fas fa-map-marker-alt"></i> Places
+                    </div>
+                    <div class="day-tab" data-tab="food-8">
+                        <i class="fas fa-utensils"></i> Food
+                    </div>
+                    <div class="day-tab" data-tab="map-8">
+                        <i class="fas fa-map"></i> Map
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="tab-content active" id="schedule-8">
+                        <div class="schedule-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-time">07:00-08:00</div>
+                                <div class="timeline-title">Breakfast at hotel</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">08:00-09:00</div>
+                                <div class="timeline-title">Pack and check out</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">09:00-10:00</div>
+                                <div class="timeline-title">Last-minute shopping near hotel</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">10:00-11:00</div>
+                                <div class="timeline-title">Train from JR Namba to KIX</div>
+                                <div class="timeline-content">
+                                    <p>JR Rapid Service, 60 minutes, ¥3,240 total for family</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">11:00-13:00</div>
+                                <div class="timeline-title">Check-in and security at KIX</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">13:00-14:00</div>
+                                <div class="timeline-title">Lunch at airport</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">15:20</div>
+                                <div class="timeline-title">Departure from KIX</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other tabs for Day 8 would be filled with similar detailed content -->
+                </div>
+            </section>
+
+            <section class="currency-converter" id="currency">
+                <h3><i class="fas fa-exchange-alt"></i> Currency Converter</h3>
+                <div class="converter-form">
+                    <div class="form-group">
+                        <label for="amount">Amount (BGN)</label>
+                        <input type="number" id="amount" value="1" min="0">
+                    </div>
+                </div>
+                <button class="convert-btn" id="convert-btn">Convert to JPY</button>
+                <div class="conversion-result" id="conversion-result">
+                    <p>1 BGN = <span>81.45 JPY</span></p>
+                </div>
+            </section>
+
+            <section class="tips-card" id="tips">
+                <h3><i class="fas fa-lightbulb"></i> Travel Tips</h3>
+                <div class="tips-list">
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i class="fas fa-yen-sign"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Budget</h4>
+                            <p>Total cost: ~¥115,000-120,000 for family of 4</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h4>IC Cards</h4>
+                            <p>Load ¥10,000 initially on Suica/ICOCA cards</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Shinkansen</h4>
+                            <p>Buy Osaka-Tokyo round trip (¥87,120)</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Apps</h4>
+                            <p>Google Maps, Hyperdia, Japan Transit Planner</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Reservations</h4>
+                            <p>Mizuno: +81-6-6212-6360<br>
+                               Giro Giro: +81-75-343-7070<br>
+                               Kiji Umeda: +81-6-6341-5488<br>
+                               Tonkatsu Maisen: +81-3-5366-1522</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Internet</h4>
+                            <p>Rent pocket WiFi at airport or use eSIM</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Language</h4>
+                            <p>Download Google Translate with Japanese offline pack</p>
+                        </div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i class="fas fa-subway"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Transportation</h4>
+                            <p>Use Google Maps for transit directions; trains are punctual</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>Japan Trip Itinerary - Family of 4 (April 1-8, 2025) | Created with ❤️ for our adventure</p>
+    </footer>
+
+    <div id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Toggle dark mode
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const icon = themeToggle.querySelector('i');
+            if (document.body.classList.contains('dark')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const closeSidebar = document.querySelector('.close-sidebar');
+        const sidebar = document.querySelector('.sidebar');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+        });
+
+        closeSidebar.addEventListener('click', () => {
+            sidebar.classList.remove('hidden');
+        });
+
+        // Tab switching
+        const tabs = document.querySelectorAll('.day-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+                const tabContent = document.getElementById(tabId);
+                const parentContent = tab.closest('.day-content');
+                
+                // Remove active class from all tabs and content
+                tab.parentElement.querySelectorAll('.day-tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                parentContent.querySelectorAll('.tab-content').forEach(c => {
+                    c.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab and its content
+                tab.classList.add('active');
+                tabContent.classList.add('active');
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update active link
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        link.classList.add('active');
+                        
+                        // Close mobile menu if open
+                        sidebar.classList.remove('hidden');
+                    }
+                }
+            });
+        });
+
+        // Trip countdown
+        function updateCountdown() {
+            const tripDate = new Date('April 1, 2025 12:40:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = tripDate - now;
+            
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                
+                document.getElementById('countdown-text').textContent = 
+                    `${days} days, ${hours} hours, ${minutes} minutes until departure`;
+            } else {
+                document.getElementById('countdown-text').textContent = "The trip has begun!";
+            }
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 60000); // Update every minute
+
+        // Currency converter (BGN to JPY only)
+        document.getElementById('convert-btn').addEventListener('click', () => {
+            const amount = document.getElementById('amount').value;
+            
+            // Fixed exchange rate for BGN to JPY
+            const rate = 81.45;
+            
+            const result = amount * rate;
+            document.getElementById('conversion-result').innerHTML = 
+                `<p>${amount} BGN = <span>${result.toFixed(2)} JPY</span></p>`;
+        });
+    </script>
+</body>
+</html>
